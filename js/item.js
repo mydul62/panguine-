@@ -1,20 +1,27 @@
-let begItem=[];
-displayBagItem('');
-function addBegItem(itemId){
+let begItem = [];
+let countResetstr = localStorage.getItem("countItem");
+countBegItem();
+displayBagItem();
+function addBegItem(itemId) {
   begItem.push(itemId);
   countBegItem();
 }
-
-function countBegItem(){
- let countbegElement = document.querySelector('.count');
- countbegElement.innerText= begItem.length;
+function countBegItem() {
+  let countbegElement = document.querySelector(".count");
+  if (begItem.length > 0) {
+    countbegElement.style.visibility = "visible";
+    countbegElement.innerText = begItem.length;
+    localStorage.setItem("countItem", begItem.length);
+  } else {
+    countbegElement.style.visibility = "hidden";
+  }
 }
 
-function displayBagItem(arry){
+function displayBagItem(arry) {
   let cartItem = document.querySelector(".womans_item ");
-  let innerHTML= '';
-  items.forEach(item => {
-  innerHTML += `
+  let innerHTML = "";
+  items.forEach((item) => {
+    innerHTML += `
   <div class="woman_card space-y-4 p-4 shadow-2xl rounded-2xl">
   <div class="image bg-[#F1F1F1] rounded-3xl p-4">
     <img src="${item.itemImage}" alt="" class="max-w-xs" />
@@ -35,11 +42,11 @@ function displayBagItem(arry){
       class="py-5 px-8 bg-gradient-to-r from-[#A4BC46] to-[#85A019] rounded-xl roboto text-[#fff] cursor-pointer" onclick="addBegItem(${item.id})";
     >
     <i class="fa-solid fa-cart-shopping"></i>
-      BUY NOW
+      ADD TO BEG
     </button>
   </div>
   </div>
-  `
-});
-cartItem.innerHTML = innerHTML;
+  `;
+  });
+  cartItem.innerHTML = innerHTML;
 }
