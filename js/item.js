@@ -1,7 +1,9 @@
-let begItem = [];
-let countResetstr = localStorage.getItem("countItem");
+var begItem = [];
+
+var countResetstr = localStorage.getItem("countItem");
 countBegItem();
-displayBagItem();
+displayBagItem(".womans_item",items);
+displayBagItem(".man_item",itemsMan);
 function addBegItem(itemId) {
   begItem.push(itemId);
   countBegItem();
@@ -11,16 +13,16 @@ function countBegItem() {
   if (begItem.length > 0) {
     countbegElement.style.visibility = "visible";
     countbegElement.innerText = begItem.length;
-    localStorage.setItem("countItem", begItem.length);
+    localStorage.setItem("countItem",JSON.stringify(begItem.length));
   } else {
     countbegElement.style.visibility = "hidden";
   }
 }
 
-function displayBagItem(arry) {
-  let cartItem = document.querySelector(".womans_item ");
+function displayBagItem(seltor,arry) {
+  let cartItem = document.querySelector(`${seltor}`);
   let innerHTML = "";
-  items.forEach((item) => {
+  arry.map((item) => {
     innerHTML += `
   <div class="woman_card space-y-4 p-4 shadow-2xl rounded-2xl">
   <div class="image bg-[#F1F1F1] rounded-3xl p-4">
