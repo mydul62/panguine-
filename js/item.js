@@ -8,6 +8,7 @@ function onLoad(){
   countBegItem();
   displayBagItem(".womans_item",items);
   displayBagItem(".man_item",itemsMan);
+  headerSection();
 }
 
 function addBegItem(itemId) {
@@ -27,6 +28,9 @@ function countBegItem() {
 
 function displayBagItem(seltor,arry) {
   let cartItem = document.querySelector(`${seltor}`);
+  if(!cartItem){
+    return;
+  }
   let innerHTML = "";
   arry.map((item) => {
     innerHTML += `
@@ -58,3 +62,8 @@ function displayBagItem(seltor,arry) {
   });
   cartItem.innerHTML = innerHTML;
 }
+
+// function headerSection(){
+//   let header= document.querySelector(".mainpage_nav");
+//   header.innerHTML =` `;
+// }

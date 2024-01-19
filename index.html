@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="corporate">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>penguine</title>
     <!-- tailwind star -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- teilwind end  -->
     <!-- google font  star -->
@@ -36,27 +41,54 @@
       .roboto {
         font-family: "Roboto", sans-serif;
       }
-      .monserrat{
-        font-family: 'Montserrat', sans-serif;
+      .monserrat {
+        font-family: "Montserrat", sans-serif;
       }
     </style>
   </head>
   <body>
     <header class="bg-[#FFFBF0] p-4 md:p-4 lg:p-0">
-      <nav class="max-w-7xl m-auto flex flex-col md:flex-row justify-center md:justify-between py-11 sticky top-0">
-        <div class="logo flex items-center">
-          <img src="images/Frame.png" alt="" />
-          <h1 class="text-2xl text-[#363958] font-bold monserrat gap-1 text-center md:text-left">
-            <span class="text-[#A4BC46;]">Penguin</span> Fashion
-          </h1>
+      <nav class="mainpage_nav">
+        <div class="navbar container flex mx-auto">
+        <div class="navbar-start w-">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn b lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a href="index.html">Home</a></li>
+              <li><a>Products</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Contact us</a></li>
+            </ul>
+          </div>
+          <a class=" text-2xl text-[#363958]"><img src="images/Frame.png" alt="" class="inline-block font-bold bebas"><Span class="text-[#A4BC46;]">Penguin</Span> Fashion</a>
         </div>
-        <menu class="flex items-center gap-11 justify-center">
-          <ul class="capitalize flex items-center gap-3 md:gap-14 text-[#3C3C3C] font-semibold text-base flex-col md:flex-row ">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">contuct us</a></li>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-base font-semibold">
+            <li><a>Home</a></li>
+            <li><a>Products</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Contact us</a></li>
           </ul>
+        </div>
+        <div class="navbar-end">
           <a href="pages/beg.html">
             <span class="cart inline-block relative ">
               <i class="fa-solid fa-cart-shopping text-2xl"></i>
@@ -64,14 +96,12 @@
               </span>
             </span>
           </a>
-          </div>
-        </menu>
-        
+        </div>
+      </div>
       </nav>
-      <div
-        class="max-w-7xl mx-auto flex Class Properties flex-col md:flex-row items-center justify-between pb-12 "
+      <div class="max-w-7xl mx-auto flex Class Properties flex-col md:flex-row items-center justify-between pb-12 "
       >
-        <div class="space-y-3">
+        <div class="space-y-3 sm:pt-8">
           <h1 class="text-7xl bebas">
             <span class="text-[#FABE4C;]">Be the Penguins</span> <br />
             of Winter
@@ -99,7 +129,8 @@
         </div>
 
         <div
-          class="womans_item grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-7"></div>
+          class="womans_item grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-7"
+        ></div>
       </div>
       <div class="max-w-7xl mx-auto pt-10 pb-24">
         <div class="title">
@@ -107,7 +138,8 @@
         </div>
 
         <div
-          class="man_item grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-7"></div>
+          class="man_item grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-7"
+        ></div>
       </div>
     </main>
     <footer></footer>

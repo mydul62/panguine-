@@ -13,38 +13,66 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <header>
+    <div class="navbar container flex mx-auto">
+      <div class="navbar-start w-">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn b lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>Home</a></li>
+            <li><a>Products</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Contact us</a></li>
+          </ul>
+        </div>
+        <a class=" text-2xl text-[#363958]"><img src="images/Frame.png" alt="" class="inline-block font-bold bebas"><Span class="text-[#A4BC46;]">Penguin</Span> Fashion</a>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 text-base font-semibold">
+          <li><a href="../index.html">Home</a></li>
+          <li><a>Products</a></li>
+          <li><a>About Us</a></li>
+          <li><a>Contact us</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a href="../pages/beg.html">
+          <span class="cart inline-block relative ">
+            <i class="fa-solid fa-cart-shopping text-2xl"></i>
+            <span class="count bg-black text-[#fff] p-3 h-4 w-4 flex items-center justify-center text-xll rounded-full absolute bottom-5 left-6">
+            </span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
   <section>
     <div class="lg:container mx-auto border p-2 lg:p-7 mt-20">
-      <h1 class=" text-5xl md:text-7xl lg:text-7xl font-semibold py-20">shoping cart</h1>
+      <h1 class=" text-5xl md:text-7xl lg:text-7xl font-semibold py-20 capitalize">shoping cart</h1>
       <hr>
       <div class="arcive flex flex-col md:flex-row lg:flex-row gap-8 justify-between pt-20">
       <div class="cart_items w-full md:w-2/3 lg:w-2/3 ">
-        <div class="cart flex justify-between p-2 md:p-5 lg:p-5 border m-0 md:m-5 lg:m-5">
-         <div class="left flex">
-          <img src="../images/jacket-1.png" alt="" class="max-w-20 md:max-w-56 lg:max-w-56">
-          <div class="details flex flex-col md:flex-col justify-between">
-            <div class="top">
-              <h1 class=" text-xl md:text-3xl capitalize font-medium">basic tee</h1>
-            <p class="text-2xl font-normal text-[#010101]">siena | large</p>
-            <h2 class="text-2xl font-medium">price</h2>
-            </div>
-            <p class="text-2xl lg:text-3xl">✅in stock</p>
-          </div>
-         </div>
-         <div class="right">
-          <select name="quantity" id="quantity" class="border-2 py-4 px-5 ">
-            <option value="1">1</option>
-            <option value="1">2</option>
-            <option value="1">3</option>
-            <option value="1">4</option>
-          </select>
-         </div>
-         <div class="cross">
-          <span><i class="fa-solid fa-xmark text-3xl"></i></span>
-         </div>
-        </div>
+        
       </div>
-        <div class="checkout sm:p-9 flex w-full md:w-1/3 flex-col space-y-10 ">
+        <div class="checkout sm:p-9 flex w-full md:w-1/3 flex-col space-y-10 shadow-lg">
            <h2>Order summary</h2>
            <div class="subtotal flex justify-between">
             <h3>Subtotal</h3>
@@ -69,5 +97,8 @@
       
     </div>
   </section>
+  <script src="../js/item_dshboard.js"></script>
+  <script src="../js/item.js"></script>
+  <script src="../pages/beg.js"></script>
 </body>
 </html>
