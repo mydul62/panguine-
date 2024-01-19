@@ -39,8 +39,9 @@ const items = [
 
 const itemsMan = [
   {
+    id: "004",
     itemImage: "images/jacket-4.png",
-    itemName: "Orange woman jacket",
+    itemName: "Snowboard Jacket Mens",
     sortDiscription:
       "Lorem Ipsum is simply dummy text of the printing and tindustry.",
     price: 764,
@@ -50,8 +51,9 @@ const itemsMan = [
     },
   },
   {
+    id: "005",
     itemImage: "images/jacket-5.png",
-    itemName: "Orange woman jacket",
+    itemName: "Man Leather Jackets",
     sortDiscription:
       "Lorem Ipsum is simply dummy text of the printing and tindustry.",
     price: 764,
@@ -61,8 +63,9 @@ const itemsMan = [
     },
   },
   {
+    id: "006",
     itemImage: "images/jacket-6.png",
-    itemName: "Orange woman jacket",
+    itemName: "Man Casual Jackets",
     sortDiscription:
       "Lorem Ipsum is simply dummy text of the printing and tindustry.",
     price: 764,

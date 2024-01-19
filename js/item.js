@@ -1,19 +1,25 @@
-var begItem = [];
+let begItem;
 
-var countResetstr = localStorage.getItem("countItem");
-countBegItem();
-displayBagItem(".womans_item",items);
-displayBagItem(".man_item",itemsMan);
+onLoad();
+function onLoad(){
+  let begItemStr = localStorage.getItem('begItem');
+  begItem=begItemStr?JSON.parse(begItemStr):[];
+
+  countBegItem();
+  displayBagItem(".womans_item",items);
+  displayBagItem(".man_item",itemsMan);
+}
+
 function addBegItem(itemId) {
   begItem.push(itemId);
   countBegItem();
+  localStorage.setItem("begItem",JSON.stringify(begItem));
 }
 function countBegItem() {
   let countbegElement = document.querySelector(".count");
   if (begItem.length > 0) {
     countbegElement.style.visibility = "visible";
     countbegElement.innerText = begItem.length;
-    localStorage.setItem("countItem",JSON.stringify(begItem.length));
   } else {
     countbegElement.style.visibility = "hidden";
   }
